@@ -1,0 +1,11 @@
+{
+    "mongoose": {
+        "url": "mongodb://esya:eseniya1998@ds247327.mlab.com:47327/esya",
+        "login": "esya",
+        "pass": "eseniya1998"
+    },
+    "port": 4000,
+    "test": {
+        "base_url": "http://localhost:3001"
+    }
+}

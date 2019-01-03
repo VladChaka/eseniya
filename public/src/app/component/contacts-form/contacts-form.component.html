@@ -1,0 +1,40 @@
+<section class="well-1">
+    <div class="container">
+      <div class="title-wrap">
+        <!-- <h4>Suspendisse sollicit</h4> -->
+
+        <h2>Форма связи</h2>
+      </div>
+
+      <form class="rd-mailform  rd-form text-left" data-form-output="form-output-global" data-form-type="contact" method="post"
+            action="bat/rd-mailform.php">
+        <div class="row row__offset">
+          <div class="col-4" style="float: left;">
+            <div class="form-wrap">
+              <input class="form-input" id="contact-name" type="text" #name name="name" placeholder="Имя" data-constraints="@Required">
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-wrap">
+              <input class="form-input" id="contact-phone" type="tel" #phone name="phone" placeholder="Телефон" data-constraints="@Required @PhoneNumber">
+            </div>
+          </div>
+          <div class="col-4" style="float: right;">
+            <div class="form-wrap">
+              <input class="form-input" id="contact-email" type="email" #email name="email" placeholder="E-Mail" data-constraints="@Required @Email">
+            </div>
+          </div>
+        </div>
+        <div class="form-wrap row" style="margin-left: -15px;margin-right: 0px;">
+          <textarea class="form-input" id="contact-message" #message name="message" placeholder="Сообщение" data-constraints="@Required"></textarea>
+        </div>
+        <!-- Google captcha
+        <div class="form-wrap text-left form-validation-left">
+          <div class="recaptcha" id="captcha1" data-sitekey="6LfZlSETAAAAAC5VW4R4tQP8Am_to4bM3dddxkEt"></div>
+        </div> -->
+        <div class="form-button group-sm">
+          <button class="button btn-line" style="float: right;" (click)="send(name.value, phone.value, email.value, message.value)" type="submit">Отправит</button>
+        </div>
+      </form>
+    </div>
+</section>

@@ -1,0 +1,21 @@
+<section class="bg01 well-1">
+    <div class="container">
+        <div class="title-wrap wow fadeInUp" data-wow-delay="0.2s">
+            <h2>Каталог Достопримечательностей Города {{ city }}</h2>
+        </div>
+
+        <div class="row row__offset wow fadeIn" *ngFor="let landmarksMass of landmarks" data-wow-delay="0.4s">
+            <div class="col-6 description" *ngFor="let landmark of landmarksMass">
+                <div class="col-6" style="float:left">
+                    <img [src]="landmark.img"  class="mt" alt=""/>
+                </div>
+                <div class="col-6" style="float:right">
+                    <h4 class="lh"><a [routerLink]="landmark.link">{{ landmark.name }}</a></h4>
+                    <p>Год основания: {{ landmark.year_foundation }}</p>
+                    <p>{{ landmark.opening_time }}</p>
+                    <a [routerLink]="landmark.link" class="btn-wrap btn-wrap-2">Просмотреть</a>
+                </div>    
+            </div> 
+        </div>
+    </div>  
+</section>

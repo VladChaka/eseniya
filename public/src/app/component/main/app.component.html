@@ -1,0 +1,60 @@
+<div class="page">
+  <!-- HEADER -->
+  <header>
+    <div class="bg_wrap bg_wrap__mod" style="border-top:none;">
+      <div id="stuck_container" class="stuck_container">
+        <div class="container">
+          <div class="brand">
+            <h1 class="brand_name"><a routerLink="/">Моя малая родина</a></h1>
+          </div>
+
+          <nav class="nav">
+            <ul class="sf-menu">
+              <li><a routerLink="/">Главная</a></li>
+              <li><a routerLink="/catalog">Каталог</a></li>
+              <li><a routerLink="/contacts">Контакты</a></li>
+              <li><a routerLink="/about">О нас</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- END HEADER -->
+
+  <!-- CONTENT -->
+  <main><router-outlet></router-outlet></main>
+  <!-- END CONTENT -->
+
+  <!-- FOOTER -->
+  <footer class="parallax parallax3" data-parallax-speed="-0.5">
+    <div class="container">
+      <div class="row">
+        <div class="grid_4 preffix_4">
+          <address class="address-wrap-1 wow fadeIn" style="color: white!important;" data-wow-delay="0.2s">
+            <i class="fa fa-map-marker"></i>
+
+            <p>
+              ул. Калиновского,<br />
+              дом 60, кв. 22
+            </p>
+            <i class="fa fa-mobile-phone offset_addr"></i>
+
+            <p>+375 29 56 33 014</p>
+          </address>
+          <ul class="social-link wow fadeInDown" data-wow-delay="0.2s">
+            <li><a class="fa fa-twitter" href="#"></a></li>
+            <li><a class="fa fa-facebook" href="#"></a></li>
+            <li><a class="fa fa-google-plus" href="#"></a></li>
+          </ul>
+          <p class="copyright">
+            Copyright © <span id="copyright-year"></span> | Есения Богуцкая
+            <!-- <a routerLink="/privacy-policy">Политика Конфиденциальности</a> -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+</div>
+<div class="snackbars" id="form-output-global"></div>

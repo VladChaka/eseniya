@@ -1,0 +1,20 @@
+<agm-map 
+  class="map"
+  [latitude]="lat"
+  [longitude]="lng"
+  [zoom]='zoom'
+  [zoomControl]="true"
+  [disableDoubleClickZoom]="true"
+  [scrollwheel]="false">
+      <agm-marker 
+        *ngFor="let m of citys; let i = index"
+        [latitude]="m.location[0].lat"
+        [longitude]="m.location[0].lng"
+        [label]="">
+
+        <agm-info-window>
+          <a routerLink="/catalog"><strong>{{m.location[0].info}}</strong></a>
+        </agm-info-window>
+        
+      </agm-marker>
+</agm-map>

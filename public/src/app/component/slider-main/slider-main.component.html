@@ -1,0 +1,51 @@
+<!-- <section class="parallax parallax1" data-parallax-speed="-0.5" style="padding:0;">
+    <div class="container slid" style="padding:0;margin:0;">
+
+        <owl-carousel
+            #owlElement
+            [options]="{items: 1, dots: true, navigation: false}"
+            [items]="images"
+            [carouselClasses]="['owl-theme', 'row', 'sliding']"
+            style="display: block;width: 100%;margin: 0;padding: 0;">
+                <div class="item box" *ngFor="let image of images;let i = index" style="margin:0;padding:0;">
+                    <div *ngFor="let img of image.img;let i = index">class="box_aside mt thumbnail-image"
+                        <a [routerLink]="img.link"><img [src]="img.src" alt=""/></a>
+                    </div>
+                    <div class="box_aside_right">
+                        <time datetime="09-23"><span>23</span> September</time>
+                    </div>
+        
+                    <div class="box_cnt__no-flow mt-1">
+                        <h4>{{ image.title }}</h4>
+        
+                        <p>{{ image.text }}</p>
+                        <a [href]="image.href" class="btn-info">More</a>
+                    </div>
+                </div>
+        </owl-carousel>
+    </div>
+</section> -->
+
+<ngb-carousel *ngIf="images" class="bg_wrap bg_wrap__mod" style="padding:0;margin:0;">
+    <ng-template ngbSlide>
+      <img [src]="images[0]" alt="Random first slide" style="max-height:500px;width:100%;">
+      <div class="carousel-caption">
+        <h3>Тарного усадьба</h3>
+        <p>Изящная восстановленная усадьба Тарново расположена в Лидском районе Гродненщины.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img [src]="images[1]" alt="Random second slide" style="max-height:500px;width:100%;">
+      <div class="carousel-caption">
+        <h3>Лида поезд</h3>
+        <p>Поезд бла-бла-бла</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img [src]="images[2]" alt="Random third slide" style="max-height:500px;width:100%;">
+      <div class="carousel-caption">
+        <h3>Лида замок</h3>
+        <p>Замок бла-бла-бла</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
