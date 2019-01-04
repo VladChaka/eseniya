@@ -840,6 +840,14 @@ main {
   background-size: cover;
 }
 
+.bg_wrap__mod_too {
+  position: relative;
+  background: url('../assets/images/fon/glav-fon-padnorama-list.jpg') no-repeat center;
+  /* background: url('../assets/images/page-2_img01.jpg') no-repeat center; */
+  /* background: url('../assets/images/page-1_img.jpg') no-repeat center; */
+  background-size: cover;
+}
+
 .bg_wrap__mod:before {
   content: '';
   display: block;
