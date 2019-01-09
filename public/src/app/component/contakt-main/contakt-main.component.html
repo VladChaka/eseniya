@@ -1,13 +1,15 @@
-<section class="well-2">
+<section>
     <div class="container">
-        <div class="title-wrap wow fadeInUp" data-wow-delay="0.2s">
-            <!-- <h4>Dweonsequat velop</h4> -->
-            <h2>Подписаться на новости</h2>
+        <div class="title-wrap wow fadeInUp" data-wow-delay="0.2s" style="margin-top:15px;">
+            <!-- <h2>Подписаться на новости</h2> -->
+            <h5>Выможете подписаться на новости чтобы получать свежие новости!</h5>
         </div>
+
 
         <form class="rd-form-subscribe rd-mailform" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
             <div class="form-wrap">
-                <input class="form-input" placeholder="E-mail" id="subscribe-form-email" #email type="email" name="email" data-constraints="@Email @Required">
+                <!-- <label for="name">Подписаться</label> -->
+                <input class="form-subcribe-input" id="name" placeholder="E-mail" id="subscribe-form-email" #email type="email" name="email" data-constraints="@Email @Required">
             </div>
             <div class="form-button">
                 <button class="fa-envelope" (click)="send(email.value)" type="submit"></button>

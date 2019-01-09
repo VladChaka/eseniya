@@ -6,28 +6,28 @@
 @import "fonts.css";
 @import url('./font-awesome/font-awesome.min.css');
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans'!important;
   font-style: normal;
   font-weight: 300;
   src: local('Open Sans Light'), local('OpenSans-Light'), url(http://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OUuhs.ttf) format('truetype');
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans'!important;
   font-style: normal;
   font-weight: 400;
   src: local('Open Sans Regular'), local('OpenSans-Regular'), url(http://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans'!important;
   font-style: normal;
   font-weight: 700;
   src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUuhs.ttf) format('truetype');
 }
 
 @font-face {
-  font-family: 'Lora';
+  font-family: 'Lora'!important;
   font-style: normal;
   font-weight: 700;
   src: local('Lora Bold'), local('Lora-Bold'), url(http://fonts.gstatic.com/s/lora/v12/0QIgMX1D_JOuO7HeNtxunw.ttf) format('truetype');
@@ -129,7 +129,7 @@ img+h4, p+.offset {
 }
 
 p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif!important;
 }
 
 p a:hover {
@@ -210,7 +210,7 @@ strong {
 
 [class*='fa-']:before {
   font-weight: 400;
-  font-family: 'FontAwesome';
+  font-family: 'FontAwesome'!important;
 }
 
 .page {
@@ -275,7 +275,7 @@ strong {
 .sf-menu>li>a {
   color: #fff!important;
   /* font: 400 15px/15px 'Open Sans', sans-serif; */
-  font-family: 'ZCOOL XiaoWei', serif;
+  font-family: 'ZCOOL XiaoWei', serif!important;
   font-size: 19px;
 }
 
@@ -387,7 +387,7 @@ strong {
 .sf-menu ul>li>a {
   color: #fff!important;
   font-size: 14px;
-  font-family: 'ZCOOL XiaoWei', serif;
+  font-family: 'ZCOOL XiaoWei', serif!important;
 }
 
 .sf-menu ul>li.sfHover>a, .sf-menu ul>li>a:hover {
@@ -543,7 +543,8 @@ strong {
 .parallax {
   background-position: center 0;
   background-repeat: no-repeat;
-  background-color: #FFF;
+  /* background-color: #FFF; */
+  background: transparent;
 }
 
 .mobile .parallax, .tablet .parallax {
@@ -620,6 +621,8 @@ strong {
 /*==================   Tumbnail    ======================*/
 
 .thumb {
+  height: 120px;
+  margin-bottom: 20px;
   display: inline-block;
   position: relative;
   overflow: hidden;
@@ -641,10 +644,10 @@ strong {
 .thumb_overlay {
   display: flex;
   position: absolute;
-  left: 10px;
-  top: 10px;
-  right: 10px;
-  bottom: 10px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   opacity: 0;
   /* opacity: 0.1; */
   -moz-transition: 0.3s all ease;
@@ -663,7 +666,7 @@ strong {
 
 .thumb:hover .thumb_overlay {
   opacity: 1;
-  background: rgba(236, 175, 105, 0.8);
+  background: rgba(45, 44, 44, 0.8);
 }
 
 .lt-ie9 .thumb:hover .thumb_overlay {
@@ -682,8 +685,10 @@ strong {
 =========================================================*/
 
 header {
-  background: #444;
+  /* background: #444; */
   text-align: center;
+  border-bottom: 1px solid #dedede;
+  /* height: 200px!important; */
 }
 
 @media (max-width: 767px) {
@@ -710,7 +715,8 @@ header {
 =========================================================*/
 
 .brand+.nav, .title-wrap+.row__md1 {
-  margin-top: 50px;
+  /* margin-top: 50px; */
+  margin-top: 25px;
 }
 
 .grid_2__offset {
@@ -739,10 +745,22 @@ header {
 }
 
 .mt {
-  margin-top: 6px;
+  /* margin-top: 6px;
   width: 243px;
-  height: 163px;
+  height: 163px; */
+  margin: 15px 18px 0;
 }
+.catalog-img {
+  max-height: 180px;
+}
+.landmark-img {
+  float: right;
+  width: 50%;
+}
+/* .first {
+  width: 100%;
+  height: initial;
+} */
 
 .mt-1 {
   margin-top: 2px;
@@ -754,7 +772,7 @@ header {
 
 main {
   display: block;
-  background: #fff;
+  background: #ffffff;
 }
 
 .add-mr {
@@ -776,6 +794,8 @@ main {
 .lh {
   line-height: 26px;
 }
+
+
 
 /*==================      Well     ======================*/
 
@@ -814,7 +834,9 @@ main {
 /*==================  Backgrounds  ======================*/
 
 .bg01 {
-  background: #ece6de;
+  /* background: #ece6de; */
+  background: #ffffff;
+  border: 1px solid #dedede;
 }
 
 .bg_wrap {
@@ -861,7 +883,7 @@ main {
 
 .bg_wrap__mod .brand_name {
   position: relative;
-  font-family: 'ZCOOL XiaoWei', serif;
+  font-family: 'ZCOOL XiaoWei', serif!important;
 }
 
 .bg-box {
@@ -897,7 +919,7 @@ main {
 .mark-list li:before {
   position: absolute;
   content: '\f105';
-  font-family: 'FontAwesome';
+  font-family: 'FontAwesome'!important;
   font-size: 16px;
   top: 0;
   left: 0;
@@ -917,18 +939,6 @@ main {
 .title-wrap {
   text-align: center;
   color: #333;
-}
-
-.title-wrap h4 {
-  display: inline-block;
-  background: #ecaf69;
-  border-radius: 50px;
-  padding: 7px 14px 10px;
-  color: #fff;
-}
-
-.title-wrap h2 {
-  margin-top: 21px;
 }
 
 .title-wrap__color h2 {
@@ -951,8 +961,7 @@ main {
 }
 
 .title-wrap__md1 {
-  /* color: #000; */
-  color: #FFF;
+  color: #000;
 }
 /* .title-wrap__md1:before { */
 /* .parallax4:before{
@@ -968,17 +977,18 @@ main {
 
 .title-wrap__md1 h2 {
   line-height: 60px;
-  margin-top: 15px;
+  /* margin-top: 15px; */
 }
 
 .title-wrap__md1 .btn-line {
-  margin-top: 40px;
+  margin-top: 15px;
 }
 
 /*==================    Images Wrap   ======================*/
 
 .img-wrap {
-  border: solid 10px #fff;
+  /* border: solid 10px #fff; */
+  margin-bottom: 20px;
 }
 
 /*==================    Vido   ======================*/
@@ -1061,12 +1071,14 @@ main {
 
 /*==================    Description    ======================*/
 
-.description p+p {
-  margin-top: 10px;
+.description p {
+  margin-top: 10px!important;
+  text-align: justify;
+  padding: 0 15px
 }
 
 .description a {
-  margin-top: 22px;
+  /* margin-top: 22px; */
 }
 
 .description a+a {
@@ -1104,6 +1116,7 @@ main {
 }
 
 .btn-line {
+  color: #000!important;
   position: relative;
   display: inline-block;
   color: #ecaf69;
@@ -1341,10 +1354,12 @@ main {
 
 footer {
   text-align: center;
+  border-top: 1px solid #dedede;
   color: #fff!important;
 }
 
 footer .copyright {
+  color: #000;
   font-size: 14px;
 }
 
@@ -1634,7 +1649,7 @@ footer .copyright {
   box-shadow: none;
   background: transparent;
   cursor: pointer;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif!important;
   font-size: 15px;
   font-weight: 400;
 }
@@ -1677,12 +1692,6 @@ input:-webkit-autofill~label, input:-webkit-autofill~.form-validation {
   margin-top: 30px;
 }
 
-@media (min-width: 1200px) {
-  *+.form-wrap {
-    margin-top: 50px;
-  }
-}
-
 .form-input {
   box-sizing: border-box;
   display: block;
@@ -1691,6 +1700,27 @@ input:-webkit-autofill~label, input:-webkit-autofill~.form-validation {
   padding: 12px 19px;
   font-size: 15px;
   font-weight: 400;
+  line-height: 1;
+  color: #bbb6b0;
+  background-color: #ffffff;
+  background-image: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  transition: 0.3s ease-in-out;
+  border: 3px solid #e2dcd5;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.form-subcribe-input {
+  box-sizing: border-box;
+  display: block;
+  width: 50%;
+  min-height: 40px;
+  padding: 0 19px;
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 26%;
   line-height: 1;
   color: #bbb6b0;
   background-color: #ffffff;
@@ -1909,7 +1939,7 @@ textarea.form-input {
 
 .checkbox .checkbox-custom-dummy::after, .checkbox-inline .checkbox-custom-dummy::after {
   content: '\f222';
-  font-family: 'Material Design Icons';
+  font-family: 'Material Design Icons'!important;
   position: absolute;
   top: -1px;
   left: -2px;
@@ -2090,12 +2120,20 @@ textarea.form-input {
   }
 }
 
-.rd-form-subscribe {
+/* .rd-form-subscribe {
   position: relative;
   max-width: 564px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 52px;
+} */
+.rd-form-subscribe {
+  position: relative;
+  max-width: 90%;
+  margin-left: 20px;
+  margin-right: 0px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .rd-form-subscribe .form-input {
@@ -2104,18 +2142,30 @@ textarea.form-input {
 
 .rd-form-subscribe .form-button {
   position: absolute;
-  right: 15px;
+  right: 25%;
   top: 50%;
   margin: 0;
   transform: translateY(-50%);
 }
 
-.rd-form-subscribe button {
+/* .rd-form-subscribe button {
   font-size: 21px;
   line-height: 21px;
   box-shadow: none;
   border: none;
   outline: none;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s ease-out all;
+} */
+
+.rd-form-subscribe button {
+  font-size: 21px;
+  margin: -2px 0px 0 0;
+  line-height: 21px;
+  box-shadow: none;
+  border: none;
+  outline: none!important;
   background: none;
   cursor: pointer;
   transition: 0.3s ease-out all;
@@ -2164,11 +2214,6 @@ button {
   color: black!important;
 }
 
-.first {
-  width: 100%;
-  height: initial;
-}
-
 @media (min-width: 1200px) {
   .slid {
     max-width: 100%!important;
@@ -2193,4 +2238,155 @@ owl-carousel-child {
 
 .parallax3 {
   background: url('../assets/images/fon/glav-fon-padnorama.jpg') no-repeat center!important;
+}
+
+
+
+
+
+
+
+.sidebar-item {
+  margin-bottom: 30px;
+  background: #ffffff;
+  border:none;
+  border-right: 1px solid #dedede;
+  /* border: 1px solid #dedede; */
+}
+.sidebar-item .sidebar-item-inner {
+  padding: 20px 25px 30px;
+}
+.sidebar-item .sidebar-item-inner .sidebar-item-title {
+  position: relative;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 500;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif!important;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  color: #212121;
+}
+.sidebar-item .sidebar-item-inner .sidebar-item-title:before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: #dde3e8;
+  position: absolute;
+  z-index: 1;
+  bottom: -15px;
+}
+ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-categories-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.sidebar-categories-list li:before {
+  content: "\f105";
+  left: 0;
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  color: #8bc34a;
+  font-family: FontAwesome;
+}
+.sidebar-categories-list li ul {
+  display: none;
+}
+.sidebar-categories-list li:hover ul {
+  display: block;
+}
+.sidebar-categories-list li ul li {
+  margin-bottom: 5px;
+}
+.sidebar-categories-list li a {
+  color: #444444!important;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.sidebar-item:last-child {
+  margin-bottom: 0;
+}
+.container .row {
+  /* margin-left: -30px; */
+  margin-left: 0;
+  margin-right: 0!important;
+}
+
+
+/* #ececec FON */
+
+.bg_wrap__mod_one {
+  background: transparent;
+  height: 100%;
+}
+.row .brand {
+  height: 100%;
+}
+
+ngb-carousel {
+  padding: 10px 0!important;
+  border-bottom: 1px solid #dedede;
+}
+
+.map-home {
+  padding: 0 0 10px!important;
+}
+.text-main {
+  margin-right: auto!important;
+  margin-left: auto!important;
+  min-height: 200px;
+  display: flex;
+  padding: 10px 0!important;
+  border-bottom: 1px solid #dedede;
+}
+.black {
+  align-self: center;
+  text-align: center
+}
+
+.popular {
+  padding: 20px 0!important;
+  border-bottom: 1px solid #dedede;
+}
+
+.logo-gif {
+  width: 55px;
+}
+.logo-text {
+  align-self: center
+}
+.logo-text a {
+  font-family: 'Pacifico', cursive;
+  color: black!important;
+  font-family: 2rem;
+}
+
+.description-div {
+  text-align: center;
+  border: 1px solid #dedede;
+  padding: 10px;
+  background: #f4f6f5;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+agm-map a {
+  color: #000!important;
+}
+
+h4 p {
+  color: #777!important;
 }

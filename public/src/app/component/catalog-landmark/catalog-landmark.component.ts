@@ -19,10 +19,11 @@ export class CatalogLandmarkComponent implements OnInit {
 
   getAll() {
     let id = { id: sessionStorage.getItem('idCity') };
+    
     this.landmarkService.getAll(id).subscribe(
       landmarks => {
         this.city = landmarks.city;
-        
+
         let index = 1,
             mass = [];
         

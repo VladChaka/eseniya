@@ -1,23 +1,28 @@
-<section class="bg01 well-1">
+<section class="popular">
     <div class="container">
-        <div class="title-wrap wow fadeInUp" data-wow-delay="0.2s">
-            <h2>Каталог Городов</h2>
+        <div class="title-wrap">
+            <h3>Каталог Городов</h3>
         </div>
 
-        <div class="row row__offset wow fadeIn" *ngFor="let citysMass of citys" data-wow-delay="0.4s">
+        <div class="row row__offset" *ngFor="let citysMass of citys">
             <div class="col-6 description" *ngFor="let city of citysMass">
-                <div class="col-6" style="float:left">
-                    <img [src]="city.img"  class="mt" alt=""/>
+                <div class="description-div" style="height:417px">
+                    <h4 class="lh">
+                        <a [routerLink]="city.link">{{ city.name }}</a>
+                    </h4>
+                    <div class="row" class="center">
+                        <a [routerLink]="city.link">
+                            <img alt="" class="catalog-img" [src]="city.img">
+                        </a>
+                    </div>
+                    <div class="row">
+                        <p>{{ city.description }}</p>
+                    </div>
+                    <div class="row" style="justify-content: flex-end;">
+                        <button (click)="goToLandmark(city._id, city.link);" class="btn-wrap btn-wrap-2">Просмотреть</button> <!-- [routerLink]="city.link" -->
+                    </div>
                 </div>
-                <div class="col-6" style="float:right">
-                    <h4 class="lh"><a [routerLink]="city.link">{{ city.name }}</a></h4>
-                    <p>{{ city.population }}</p>
-                    <p>{{ city.count_landmarks }}</p>
-                    <p>{{ city.age }}</p>
-                    <a (click)="goToLandmark(city._id, city.link)" class="btn-wrap btn-wrap-2">Просмотреть</a>
-                </div>    
-            </div> 
+            </div>
         </div>
-
     </div>
 </section>

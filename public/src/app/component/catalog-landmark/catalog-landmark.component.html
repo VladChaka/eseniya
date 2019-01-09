@@ -1,10 +1,10 @@
-<section class="bg01 well-1">
+<section class="popular">
     <div class="container">
-        <div class="title-wrap wow fadeInUp" data-wow-delay="0.2s">
-            <h2>Каталог Достопримечательностей Города {{ city }}</h2>
+        <div class="title-wrap">
+            <h3>Каталог Достопримечательностей Города {{ city }}</h3>
         </div>
 
-        <div class="row row__offset wow fadeIn" *ngFor="let landmarksMass of landmarks" data-wow-delay="0.4s">
+        <!-- <div class="row row__offset wow fadeIn" *ngFor="let landmarksMass of landmarks" data-wow-delay="0.4s">
             <div class="col-6 description" *ngFor="let landmark of landmarksMass">
                 <div class="col-6" style="float:left">
                     <img [src]="landmark.img"  class="mt" alt=""/>
@@ -16,6 +16,27 @@
                     <a [routerLink]="landmark.link" class="btn-wrap btn-wrap-2">Просмотреть</a>
                 </div>    
             </div> 
+        </div> -->
+
+        <div class="row row__offset" *ngFor="let landmarksMass of landmarks">
+            <div class="col-6 description" *ngFor="let landmark of landmarksMass">
+                <div class="description-div" style="height:417px">
+                    <h4 class="lh">
+                        <a [routerLink]="landmark.link">{{ landmark.name }}</a>
+                    </h4>
+                    <div class="row" class="center">
+                        <a [routerLink]="landmark.link">
+                            <img alt="" class="catalog-img" [src]="landmark.img">
+                        </a>
+                    </div>
+                    <div class="row">
+                        <p>{{ landmark.description }}</p>
+                    </div>
+                    <div class="row" style="justify-content: flex-end;">
+                        <a [routerLink]="landmark.link" class="btn-wrap btn-wrap-2">Просмотреть</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>  
 </section>

@@ -26,26 +26,26 @@
     </div>
 </section> -->
 
-<ngb-carousel *ngIf="images" class="bg_wrap bg_wrap__mod" style="padding:0;margin:0;">
+<ngb-carousel *ngIf="images">
     <ng-template ngbSlide>
-      <img [src]="images[0]" alt="Random first slide" style="max-height:500px;width:100%;">
+      <img [src]="images[0]" style="max-height:300px;width:100%;">
       <div class="carousel-caption">
         <h3>Тарного усадьба</h3>
         <p>Изящная восстановленная усадьба Тарново расположена в Лидском районе Гродненщины.</p>
       </div>
     </ng-template>
     <ng-template ngbSlide>
-      <img [src]="images[1]" alt="Random second slide" style="max-height:500px;width:100%;">
+      <img [src]="images[1]"  style="max-height:300px;width:100%;">
       <div class="carousel-caption">
         <h3>Лида поезд</h3>
-        <p>Поезд бла-бла-бла</p>
+        <p>Памятник воинам-железнодорожникам находится в городе Лида.</p>
       </div>
     </ng-template>
     <ng-template ngbSlide>
-      <img [src]="images[2]" alt="Random third slide" style="max-height:500px;width:100%;">
+      <img [src]="images[2]" style="max-height:300px;width:100%;">
       <div class="carousel-caption">
         <h3>Лида замок</h3>
-        <p>Замок бла-бла-бла</p>
+        <p>Замок Гедимина в романском готическом стиле в городе Лида.</p>
       </div>
     </ng-template>
   </ngb-carousel>

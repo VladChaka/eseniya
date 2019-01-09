@@ -19,6 +19,7 @@ import { BoartOftrusteesAboutComponent } from './component/boart-oftrustees-abou
 import { LibraryFidingAboutComponent } from './component/library-fiding-about/library-fiding-about.component';
 import { PrivacyComponent } from './component/privacy/privacy.component';
 import { SidebarHomeComponent } from './component/sidebar-home/sidebar-home.component';
+import { SidebarComponent } from './component/sidebar/sidebar.component';
 
 /**
  * Slider
@@ -139,7 +140,8 @@ import { LandmarkChehovComponent } from './component/landmark-chehov/landmark-ch
     CatalogLandmarkComponent,
     LandmarkYukonComponent,
     LandmarkMayakComponent,
-    LandmarkChehovComponent
+    LandmarkChehovComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
