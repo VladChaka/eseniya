@@ -11,4 +11,5 @@ export class LandmarkService {
     constructor(private remoteService: RemoteService) { }
 
     getAll(id): Observable<any> { return this.remoteService.getLandmarksByCityId(id); }
+    getAllLandmarks(): Observable<any> { return this.remoteService.getAllLandmarks(); }
 }

@@ -38,6 +38,7 @@ export class RemoteService {
 
 
   getAllCitys(): Observable<any> { return this.useHttpRequest('city',  null, 'get') }
+  getAllLandmarks(): Observable<any> { return this.useHttpRequest('landmark',  null, 'get') }
 
   getAllContacts(): Observable<any> { return this.useHttpRequest('contact',  null, 'get') }
   getAllOrders(): Observable<any> { return this.useHttpRequest('order',  null, 'get') }
