@@ -13,9 +13,7 @@ export class NewsLastVideoComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.safeURL);
     this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/watch?v=2LPM9Xix2qc#action=share');
-    console.log(this.safeURL);
   }
 
 }
